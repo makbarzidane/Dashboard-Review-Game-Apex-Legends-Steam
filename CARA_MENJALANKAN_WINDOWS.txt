@@ -1,0 +1,27 @@
+CARA MENJALANKAN DASHBOARD DI WINDOWS
+
+Masalah yang sering terjadi:
+Kamu menjalankan perintah dengan Python 3.14. Untuk dashboard ini, jangan gunakan Python 3.14 karena model dibuat menggunakan scikit-learn 1.6.1 dan versi tersebut lebih aman dijalankan pada Python 3.11.
+
+Langkah paling mudah:
+1. Install Python 3.11 64-bit dari python.org.
+2. Saat instalasi, centang "Add python.exe to PATH".
+3. Buka folder dashboard_apex_revisi.
+4. Klik dua kali file:
+   run_local_windows.bat
+
+Cara manual lewat PowerShell:
+
+cd "E:\#analisis Sentimen\dashboard_apex_revisi"
+py -3.11 -m venv .venv
+.\.venv\Scripts\activate
+python -m pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
+streamlit run app.py
+
+Catatan penting:
+- Jangan gunakan perintah: python -m pip install -r requirements.txt jika command python kamu masih mengarah ke Python 3.14.
+- Cek versi Python dengan:
+  python --version
+- Setelah virtual environment aktif, hasil yang benar seharusnya Python 3.11.x.
+- Untuk deploy Streamlit Cloud, file runtime.txt sudah diset ke python-3.11.
