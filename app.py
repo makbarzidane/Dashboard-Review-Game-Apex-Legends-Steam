@@ -30,7 +30,7 @@ st.markdown(
     <style>
         /* Area utama dashboard agar sejajar dengan sidebar */
         .block-container {
-            padding-top: 1.1rem !important;
+            padding-top: 2.1rem !important;
             padding-bottom: 2rem !important;
             padding-left: 4rem !important;
             padding-right: 4rem !important;
