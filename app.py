@@ -28,39 +28,43 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-        {
-            padding-top: 3.2rem !important;
+        /* Area utama dashboard agar sejajar dengan sidebar */
+        .block-container {
+            padding-top: 1.1rem !important;
             padding-bottom: 2rem !important;
             padding-left: 4rem !important;
             padding-right: 4rem !important;
             max-width: 100% !important;
+            overflow: visible !important;
         }
 
-        /* Area header dashboard */
+        /* Header dashboard */
         .hero-header {
-            margin-top: 0.35rem !important;
-            margin-bottom: 0.35rem !important;
-            padding-top: 0.15rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 1.1rem !important;
+            padding-top: 0 !important;
             overflow: visible !important;
         }
 
         .main-title {
-            font-size: clamp(1.85rem, 3vw, 2.45rem);
-            font-weight: 800;
-            line-height: 1.28;
-            margin: 0 0 0.35rem 0;
-            padding: 0.15rem 0 0.2rem 0;
-            color: #FFFFFF;
+            font-size: clamp(1.85rem, 3vw, 2.35rem) !important;
+            font-weight: 800 !important;
+            line-height: 1.25 !important;
+            margin-top: 0 !important;
+            margin-bottom: 0.35rem !important;
+            padding-top: 0 !important;
+            color: #FFFFFF !important;
             letter-spacing: -0.02em;
-            white-space: normal;
+            white-space: normal !important;
             overflow: visible !important;
         }
 
         .subtitle {
-            font-size: 1rem;
-            line-height: 1.55;
-            color: #CBD5E1;
-            margin: 0 0 1.2rem 0;
+            font-size: 1rem !important;
+            line-height: 1.5 !important;
+            color: #CBD5E1 !important;
+            margin-top: 0 !important;
+            margin-bottom: 1.1rem !important;
         }
 
         .pill {
@@ -104,13 +108,18 @@ st.markdown(
 
         @media (max-width: 768px) {
             .block-container {
-                padding-top: 3.8rem !important;
+                padding-top: 1rem !important;
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
             }
+
             .main-title {
-                font-size: 1.75rem;
-                line-height: 1.32;
+                font-size: 1.6rem !important;
+                line-height: 1.3 !important;
+            }
+
+            .subtitle {
+                font-size: 0.92rem !important;
             }
         }
     </style>
