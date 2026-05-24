@@ -29,8 +29,8 @@ st.markdown(
     """
     <style>
         {
-            padding-top: 2.2rem !important;
-            padding-bottom: 2rem !important;
+            padding-top: 1.2rem !important;
+            padding-bottom: 1rem !important;
             padding-left: 4rem !important;
             padding-right: 4rem !important;
             max-width: 100% !important;
