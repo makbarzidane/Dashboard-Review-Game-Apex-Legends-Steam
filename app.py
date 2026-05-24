@@ -29,8 +29,8 @@ st.markdown(
     """
     <style>
         {
-            padding-top: 1.2rem !important;
-            padding-bottom: 1rem !important;
+            padding-top: 3.2rem !important;
+            padding-bottom: 2rem !important;
             padding-left: 4rem !important;
             padding-right: 4rem !important;
             max-width: 100% !important;
@@ -39,8 +39,8 @@ st.markdown(
         /* Area header dashboard */
         .hero-header {
             margin-top: 0.35rem !important;
-            margin-bottom: 1.1rem !important;
-            padding-top: 0.35rem !important;
+            margin-bottom: 0.35rem !important;
+            padding-top: 0.15rem !important;
             overflow: visible !important;
         }
 
