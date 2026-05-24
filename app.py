@@ -29,7 +29,7 @@ st.markdown(
     """
     <style>
         {
-            padding-top: 3.2rem !important;
+            padding-top: 2.2rem !important;
             padding-bottom: 2rem !important;
             padding-left: 4rem !important;
             padding-right: 4rem !important;
