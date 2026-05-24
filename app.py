@@ -19,7 +19,7 @@ from wordcloud import WordCloud
 # KONFIGURASI HALAMAN
 # =========================================================
 st.set_page_config(
-    page_title="Dashboard Analisis Sentimen Apex Legends",
+    page_title="Dashboard Analisis Sentimen Apex Legends di Platform Steam",
     page_icon="🎮",
     layout="wide",
     initial_sidebar_state="expanded",
