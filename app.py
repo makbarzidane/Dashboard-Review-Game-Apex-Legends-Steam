@@ -28,25 +28,46 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-        .block-container {
-            padding-top: 1.5rem;
-            padding-bottom: 2rem;
+        {
+            padding-top: 3.2rem !important;
+            padding-bottom: 2rem !important;
+            padding-left: 4rem !important;
+            padding-right: 4rem !important;
+            max-width: 100% !important;
         }
+
+        /* Area header dashboard */
+        .hero-header {
+            margin-top: 0.35rem !important;
+            margin-bottom: 1.1rem !important;
+            padding-top: 0.35rem !important;
+            overflow: visible !important;
+        }
+
         .main-title {
-            font-size: 2.3rem;
+            font-size: clamp(1.85rem, 3vw, 2.45rem);
             font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 0.25rem;
+            line-height: 1.28;
+            margin: 0 0 0.35rem 0;
+            padding: 0.15rem 0 0.2rem 0;
+            color: #FFFFFF;
+            letter-spacing: -0.02em;
+            white-space: normal;
+            overflow: visible !important;
         }
+
         .subtitle {
             font-size: 1rem;
+            line-height: 1.55;
             color: #CBD5E1;
-            margin-bottom: 1.2rem;
+            margin: 0 0 1.2rem 0;
         }
+
         .pill {
             display: inline-block;
             padding: 0.25rem 0.65rem;
             margin-right: 0.35rem;
+            margin-bottom: 0.35rem;
             border-radius: 999px;
             background: rgba(245, 158, 11, 0.16);
             border: 1px solid rgba(245, 158, 11, 0.35);
@@ -54,6 +75,7 @@ st.markdown(
             font-size: 0.82rem;
             font-weight: 600;
         }
+
         .note-box {
             padding: 0.95rem 1rem;
             border-radius: 1rem;
@@ -61,19 +83,35 @@ st.markdown(
             border: 1px solid rgba(148, 163, 184, 0.25);
             color: #E2E8F0;
         }
+
         div[data-testid="stMetric"] {
             background: rgba(17, 24, 39, 0.85);
             border: 1px solid rgba(148, 163, 184, 0.22);
             padding: 0.85rem 1rem;
             border-radius: 1rem;
         }
+
         .stTabs [data-baseweb="tab-list"] {
             gap: 0.35rem;
+            flex-wrap: wrap;
         }
+
         .stTabs [data-baseweb="tab"] {
             border-radius: 999px;
             padding: 0.45rem 0.9rem;
             background: rgba(148, 163, 184, 0.12);
+        }
+
+        @media (max-width: 768px) {
+            .block-container {
+                padding-top: 3.8rem !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .main-title {
+                font-size: 1.75rem;
+                line-height: 1.32;
+            }
         }
     </style>
     """,
@@ -497,17 +535,18 @@ final_df = ensure_label_columns(final_df)
 raw_df = ensure_label_columns(raw_df)
 balanced_df = build_balanced_data(final_df, random_state=int(config.get("random_state", 42)))
 
-st.markdown('<div class="main-title">Dashboard Analisis Sentimen Ulasan Apex Legends</div>', unsafe_allow_html=True)
-st.markdown(
-    '<div class="subtitle">Implementasi model Multinomial Naive Bayes dengan fitur TF-IDF N-Gram untuk data ulasan Steam.</div>',
-    unsafe_allow_html=True,
-)
 st.markdown(
     """
-    <span class="pill">TF-IDF N-Gram</span>
-    <span class="pill">Multinomial Naive Bayes</span>
-    <span class="pill">Apex Legends Steam Reviews</span>
-    <span class="pill">Streamlit Dashboard</span>
+    <div class="hero-header">
+        <h1 class="main-title">Dashboard Analisis Sentimen Ulasan Apex Legends</h1>
+        <p class="subtitle">
+            Implementasi model Multinomial Naive Bayes dengan fitur TF-IDF N-Gram untuk data ulasan Steam.
+        </p>
+        <span class="pill">TF-IDF N-Gram</span>
+        <span class="pill">Multinomial Naive Bayes</span>
+        <span class="pill">Apex Legends Steam Reviews</span>
+        <span class="pill">Streamlit Dashboard</span>
+    </div>
     """,
     unsafe_allow_html=True,
 )
